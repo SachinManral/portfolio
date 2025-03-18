@@ -1,0 +1,145 @@
+.resume-section {
+  background-color: var(--bg-primary);
+}
+
+.resume-content {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.resume-column {
+  flex: 1;
+}
+
+.resume-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.resume-heading svg {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-right: 15px;
+}
+
+.resume-heading h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.resume-item {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resume-item h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.resume-item h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.resume-item .institution {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--text-secondary);
+}
+
+.resume-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.skills-section {
+  margin-top: 60px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skill-info h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.skill-info span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: var(--card-bg);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+  .resume-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-heading h3 {
+    font-size: 1.5rem;
+  }
+  
+  .resume-item {
+    padding: 20px;
+  }
+  
+  .resume-item h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.full-width {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}

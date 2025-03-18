@@ -1,0 +1,132 @@
+.about-section {
+  background-color: var(--bg-primary);
+}
+
+.about-content {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1.5;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h4 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.skills-overview {
+  margin-top: 60px;
+}
+
+.skills-overview h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.skill-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.skill-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    margin-bottom: 30px;
+  }
+  
+  .about-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
