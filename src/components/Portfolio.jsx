@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import '../styles/Portfolio.css';
+// Keep the working image import
 import echocartImage from '../assets/images/echocartshop.png';
+// Update import to match the exact filename
+import portfolioImage from '../assets/images/portfolioimage.png';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
@@ -12,9 +15,10 @@ const Portfolio = () => {
       id: 1,
       title: 'E-Commerce Platform',
       category: 'web-development',
-      image: echocartImage, // Use the imported image here
-      description: 'A e-commerce platform built with React, Node.js.',
-      technologies: ['React', 'Node.js', 'Express', 'Redux'],
+      // This approach works for the first image
+      image: echocartImage,
+      description: 'A modern e-commerce platform built with Next.js, TypeScript, and Tailwind CSS.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Redux', 'Framer Motion', 'ShadCN UI'],
       github: 'https://github.com/SachinManral/echocart',
       demo: 'https://echocartshop.netlify.app'
     },
@@ -22,11 +26,12 @@ const Portfolio = () => {
       id: 2,
       title: 'Portfolio Website',
       category: 'web-design',
-      image: 'https://via.placeholder.com/600x400/252525/64ffda?text=Portfolio+Website',
+      // Use the imported portfolio image
+      image: portfolioImage,
       description: 'A modern portfolio website built with React, featuring smooth animations and responsive design.',
       technologies: ['React', 'CSS', 'Framer Motion', 'React Router'],
       github: 'https://github.com/SachinManral/portfolio',
-      demo: 'https://sachinmanral.github.io/portfolio'
+      demo: 'https://sachinmanral.netlify.app'
     }
     // Projects with IDs 3-6 have been removed
   ];
