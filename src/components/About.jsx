@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaServer, FaDatabase, FaCloud } from 'react-icons/fa';
+import { FaCode, FaServer, FaDatabase, FaPalette } from 'react-icons/fa';
 // Fix the profile placeholder import
 // import profilePlaceholder from '../assets/images/profile-placeholder';
 import '../styles/About.css';
@@ -27,9 +27,9 @@ const About = () => {
     },
     {
       id: 4,
-      icon: <FaCloud />,
-      title: 'Cloud Services',
-      description: 'Deploying and managing applications on AWS, Google Cloud, and Azure platforms.'
+      icon: <FaPalette />,
+      title: 'Canva Designing',
+      description: 'Creating visually appealing graphics, presentations, and social media content using Canva design tools.'
     }
   ];
 

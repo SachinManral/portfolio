@@ -29,11 +29,11 @@ const Resume = () => {
   ];
 
   const skills = [
-    { id: 1, name: 'Frontend Development', percentage: 75 },
-    { id: 2, name: 'Backend Development', percentage: 80 },
+    { id: 1, name: 'Frontend Development', percentage: 70 },
+    { id: 2, name: 'Backend Development', percentage: 60 },
     { id: 3, name: 'SQL & Databases', percentage: 65 },
-    { id: 4, name: 'Machine Learning', percentage: 70 },
-    { id: 5, name: 'Cloud Services', percentage: 60 }
+    { id: 4, name: 'Machine Learning', percentage: 55 },
+    { id: 5, name: 'Canva Designing', percentage: 70 }
   ];
 
   return (
