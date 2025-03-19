@@ -25,7 +25,7 @@ const Hero = () => {
             <h2>Software Engineer</h2>
             <p>
               I'm a passionate software engineer with expertise in full-stack development,
-              machine learning, and cloud technologies. I love building innovative solutions
+              machine learning, and canva designing. I love building innovative solutions
               that solve real-world problems and create meaningful user experiences.
             </p>
             <div className="hero-buttons">
