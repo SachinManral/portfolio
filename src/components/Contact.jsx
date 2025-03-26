@@ -17,6 +17,8 @@ const Contact = () => {
     message: ''
   });
 
+  // Removed EmailJS initialization
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -28,28 +30,49 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Simulate form submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Your message has been sent successfully!'
-    });
-    
-    // Reset form after submission
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+    // Using Formspree instead of EmailJS
+    fetch("https://formspree.io/f/xkgjzaje", {
+      method: "POST",
+      body: new FormData(e.target),
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(response => {
+        if (response.ok) {
+          setFormStatus({
+            submitted: true,
+            success: true,
+            message: 'Your message has been sent successfully!'
+          });
+          
+          // Reset form after successful submission
+          setTimeout(() => {
+            setFormData({
+              name: '',
+              email: '',
+              subject: '',
+              message: ''
+            });
+            
+            setFormStatus({
+              submitted: false,
+              success: false,
+              message: ''
+            });
+          }, 5000);
+        } else {
+          throw new Error('Failed to submit form');
+        }
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+        setFormStatus({
+          submitted: true,
+          success: false,
+          message: 'Failed to send message. Please try again later.'
+        });
       });
-      
-      setFormStatus({
-        submitted: false,
-        success: false,
-        message: ''
-      });
-    }, 5000);
   };
 
   return (
@@ -145,7 +168,12 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form 
+              className="contact-form" 
+              onSubmit={handleSubmit}
+              action="https://formspree.io/f/xkgjzaje"
+              method="POST"
+            >
               <div className="form-group">
                 <input 
                   type="text" 
